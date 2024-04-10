@@ -34,7 +34,7 @@ function App() {
                 <p className="text-[#888888] text-base font-light font-sans">
                   Descubre el auténtico sabor de Oaxaca con nuestra selección
                   artesanal de mezcales. Sumérgete en la riqueza de nuestra
-                  cultura y tradición con cada sorbo.
+                  cultura y tradición con cada sorbo...
                 </p>
                 <div>
                   <button className="border border-[#623D21] bg-[#956851] text-white font-sans text-sm font-semibold py-2 px-4">
