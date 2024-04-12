@@ -1,25 +1,55 @@
 import React from "react";
-import bg_banner from "@/assets/bg-banner.svg";
-import bg_about from "@/assets/bg-about.svg";
+import bg_hero from "@/assets/bg-hero.png";
+import bg_about from "@/assets/bg-about.png";
 import logo from "@/assets/logo.svg";
-import hand from "@/assets/hand.svg";
-import bottle_1 from "@/assets/bottle-1.svg";
-import bottle_2 from "@/assets/bottle-2.svg";
-import bottle_3 from "@/assets/bottle-3.svg";
-import bottle_4 from "@/assets/bottle-4.svg";
-import bottle_5 from "@/assets/bottle-5.svg";
-import bottle_6 from "@/assets/bottle-6.svg";
-import bottle_7 from "@/assets/bottle-7.svg";
-import cta from "@/assets/cta.svg";
-import lemon from "@/assets/lemon.svg";
+import isotipo from "@/assets/isotipo.svg";
+import hand from "@/assets/hand.png";
+import bottle_1 from "@/assets/bottle-1.png";
+import bottle_2 from "@/assets/bottle-2.png";
+import bottle_3 from "@/assets/bottle-3.png";
+import bottle_4 from "@/assets/bottle-4.png";
+import bottle_5 from "@/assets/bottle-5.png";
+import bottle_6 from "@/assets/bottle-6.png";
+import bottle_7 from "@/assets/bottle-7.png";
+import bg_cta from "@/assets/bg-cta.png";
+import lemon from "@/assets/lemon.png";
 import water from "@/assets/water.png";
+import contact from "@/assets/bg-contact.png";
 
 function App() {
   return (
     <>
+      <div className="backdrop-blur-md bg-white/30 fixed top-0 z-10 w-full">
+        <nav className="container mx-auto flex flex-row justify-between py-7 items-center">
+          <div>
+            <img src={isotipo} alt="" />
+          </div>
+
+          <ul className="flex flex-row justify-between gap-6 font-sans font-medium text-sm text-[#4A4242] uppercase h-full items-center">
+            <li>
+              <a href="">Quienes somos</a>
+            </li>
+
+            <li>
+              <a href="">Nuestros Productos</a>
+            </li>
+
+            <li>
+              <a href="">Contacto</a>
+            </li>
+
+            <li>
+            <button className="border border-[#956851] bg-transparent text-[#956851] font-sans text-sm font-semibold py-2 px-4">
+                    Explorar Ahora
+                  </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <section className="h-screen relative">
         <img
-          src={bg_banner}
+          src={bg_hero}
           alt=""
           className="w-full bg-no-repeat bg-cover object-cover object-center absolute h-full"
         />
@@ -77,7 +107,7 @@ function App() {
         </div>
       </section>
 
-      <section className="h-fit bg-[url('./assets/bg-texture.svg')] relative bg-no-repeat bg-cover">
+      <section className="h-fit bg-[url('./assets/bg-texture.png')] relative bg-no-repeat bg-cover">
         <div className="absolute bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-contain"></div>
         <div className="flex flex-row justify-end items-center pt-6">
           <div className="w-5/12 flex flex-col gap-4">
@@ -172,7 +202,7 @@ function App() {
 
       <section className="h-screen relative">
         <img
-          src={cta}
+          src={bg_cta}
           alt=""
           className="w-full bg-no-repeat bg-cover object-cover object-center absolute h-full"
         />
@@ -193,16 +223,133 @@ function App() {
                   </button>
                 </div>
               </div>
-              <div className="absolute top-0 -left-40">
-                <img src={lemon} alt="" className="mix-blend-lighten" />
+              <div className="absolute top-0 -left-56">
+                <img src={lemon} alt="" className="mix-blend-lighten w-96" />
               </div>
               <div className="absolute top-0 -left-40">
-                <img src={water} alt="" className="mix-blend-lighten aspect-square h-96" />
+                <img
+                  src={water}
+                  alt=""
+                  className="mix-blend-lighten aspect-square h-96"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="h-fit flex flex-row bg-white">
+        <div className="w-1/2 relative">
+          <div className="absolute top-0 left-0 bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-fill"></div>
+          <div className="flex flex-row justify-center items-center h-full">
+            <div className="mx-24 flex flex-col gap-4 my-16">
+              <div className="flex flex-col gap-4">
+                <h2 className="text-4xl text-[363636] tracking-wider font-serif font-semibold uppercase">
+                  Contáctanos
+                </h2>
+                <p className="text-[#7B7B7B] text-lg font-normal font-sans leading-7">
+                  ¿Tienes alguna pregunta o comentario? Estamos aquí para
+                  escucharte. Completa el formulario a continuación y nos
+                  pondremos en contacto contigo lo antes posible. ¡Esperamos
+                  saber de ti!
+                </p>
+              </div>
+              <form className="flex flex-col gap-4">
+                <div>
+                  <label htmlFor="name">Nombre</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Escribe tu nombre"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email">Correo electrónico</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Escribe tu correo electrónico"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message">Mensaje</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Escribe tu mensaje"
+                    rows="8"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button className="border border-[#623D21] font-sans font-semibold text-sm text-white bg-[#956851] px-4 py-2 block w-full">
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="absolute bottom-0 left-0 bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-fill rotate-180 invert"></div>
+        </div>
+        <div className="w-1/2">
+          <img src={contact} alt="" className="object-cover h-full w-full" />
+        </div>
+      </section>
+
+      <footer className="bg-[url('./assets/footer.png')] relative bg-no-repeat bg-cover w-full">
+        <div className="container mx-auto">
+          <div className="w-1/2 flex flex-col justify-center items-center gap-8 pt-8 pb-24">
+            <img src={logo} alt="" className="w-20" />
+
+            <div className="flex flex-col gap-10">
+              <div className="flex flex-row gap-4 px-8">
+                <a
+                  href=""
+                  className="font-sans font-medium text-xs text-white uppercase flex gap-2"
+                >
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <span>contacto@chimalli.com</span>
+                </a>
+
+                <a
+                  href=""
+                  className="font-sans font-medium text-xs text-white uppercase flex gap-2"
+                >
+                  <ion-icon name="call-outline"></ion-icon>
+                  <span>961 234 00 88 11</span>
+                </a>
+              </div>
+
+              <hr className="border border-white w-full" />
+
+              <div className="flex justify-center gap-6">
+                <a href="">
+                  <ion-icon name="logo-instagram" size="large"></ion-icon>
+                </a>
+
+                <a href="">
+                  <ion-icon name="logo-facebook" size="large"></ion-icon>
+                </a>
+
+                <a href="">
+                  {" "}
+                  <ion-icon name="logo-youtube" size="large"></ion-icon>
+                </a>
+              </div>
+
+              <div className="font-sans font-medium text-xs text-white uppercase text-center flex flex-col gap-4">
+                <p>~ OAXACA DE JUÁREZ, OAXACA ~ </p>
+
+                <a href="">POLÍTICA DE PRIVACIDAD</a>
+
+                <p>Todos los derechos reservados ©</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

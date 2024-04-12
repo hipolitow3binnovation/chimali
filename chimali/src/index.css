@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+select,
+textarea {
+  @apply outline-none focus:ring-0 border border-[#ADADAD] block px-4 py-2 w-full
+  placeholder:font-sans placeholder:font-light placeholder:text-sm placeholder:text-[#888888];
+}
+
+label {
+    @apply font-sans font-semibold text-sm text-[#363636] block;
+}
+
+ion-icon {
+  font-size: 16px;
+  color: #ffffff;
+}
