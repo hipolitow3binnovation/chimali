@@ -1,20 +1,20 @@
 import React from "react";
-import bg_hero from "@/assets/bg-hero.png";
-import bg_about from "@/assets/bg-about.png";
+import bg_hero from "@/assets/bg-hero.webp";
+import bg_about from "@/assets/bg-about.webp";
 import logo from "@/assets/logo.svg";
 import isotipo from "@/assets/isotipo.svg";
-import hand from "@/assets/hand.png";
-import bottle_1 from "@/assets/bottle-1.png";
-import bottle_2 from "@/assets/bottle-2.png";
-import bottle_3 from "@/assets/bottle-3.png";
-import bottle_4 from "@/assets/bottle-4.png";
-import bottle_5 from "@/assets/bottle-5.png";
-import bottle_6 from "@/assets/bottle-6.png";
-import bottle_7 from "@/assets/bottle-7.png";
-import bg_cta from "@/assets/bg-cta.png";
-import lemon from "@/assets/lemon.png";
-import water from "@/assets/water.png";
-import contact from "@/assets/bg-contact.png";
+import hand from "@/assets/hand.webp";
+import bottle_1 from "@/assets/bottle-1.webp";
+import bottle_2 from "@/assets/bottle-2.webp";
+import bottle_3 from "@/assets/bottle-3.webp";
+import bottle_4 from "@/assets/bottle-4.webp";
+import bottle_5 from "@/assets/bottle-5.webp";
+import bottle_6 from "@/assets/bottle-6.webp";
+import bottle_7 from "@/assets/bottle-7.webp";
+import bg_cta from "@/assets/bg-cta.webp";
+import lemon from "@/assets/lemon.webp";
+import water from "@/assets/water.webp";
+import contact from "@/assets/bg-contact.webp";
 
 function App() {
   return (
@@ -107,7 +107,7 @@ function App() {
         </div>
       </section>
 
-      <section className="h-fit bg-[url('./assets/bg-texture.png')] relative bg-no-repeat bg-cover">
+      <section className="h-fit bg-[url('./assets/bg-texture.webp')] relative bg-no-repeat bg-cover">
         <div className="absolute bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-contain"></div>
         <div className="flex flex-row justify-end items-center pt-6">
           <div className="w-5/12 flex flex-col gap-4">
@@ -298,7 +298,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-[url('./assets/footer.png')] relative bg-no-repeat bg-cover w-full">
+      <footer className="bg-[url('./assets/footer.webp')] relative bg-no-repeat bg-cover w-full">
         <div className="container mx-auto">
           <div className="w-1/2 flex flex-col justify-center items-center gap-8 pt-8 pb-24">
             <img src={logo} alt="" className="w-20" />
