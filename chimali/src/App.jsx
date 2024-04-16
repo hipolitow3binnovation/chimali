@@ -12,7 +12,7 @@ function App() {
 		<>
 			<Navbar />
 
-			<main>
+			<main className="w-full">
 				<Hero />
 				<About />
 				<Products />

@@ -3,16 +3,16 @@ import contact from "@/assets/bg-contact.webp";
 
 const Contact = () => {
 	return (
-		<section className="flex flex-row bg-white h-fit">
-			<div className="relative w-1/2">
+		<section className="flex flex-col bg-white md:flex-row h-fit" id="contacto">
+			<div className="relative w-full md:w-1/2">
 				<div className="absolute top-0 left-0 bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-fill"></div>
 				<div className="flex flex-row items-center justify-center h-full">
-					<div className="flex flex-col gap-4 mx-24 my-16">
+					<div className="flex flex-col gap-4 mx-12 my-16 lg:mx-24">
 						<div className="flex flex-col gap-4">
-							<h2 className="text-4xl text-[363636] tracking-wider font-serif font-semibold uppercase">
+							<h2 className="font-serif text-2xl font-semibold tracking-wider text-[#363636] uppercase lg:text-4xl">
 								Contáctanos
 							</h2>
-							<p className="text-[#7B7B7B] text-lg font-normal font-sans leading-7">
+							<p className="text-[#7B7B7B] text-sm lg:text-lg font-normal font-sans leading-7">
 								¿Tienes alguna pregunta o comentario? Estamos aquí para
 								escucharte. Completa el formulario a continuación y nos
 								pondremos en contacto contigo lo antes posible. ¡Esperamos saber
@@ -45,7 +45,7 @@ const Contact = () => {
 							</div>
 
 							<div>
-								<button className="border border-[#623D21] font-sans font-semibold text-sm text-white bg-[#956851] px-4 py-2 block w-full">
+								<button className="border uppercase border-[#623D21] font-sans font-semibold text-sm text-white bg-[#956851] px-4 py-2 block w-full">
 									Enviar
 								</button>
 							</div>
@@ -54,7 +54,7 @@ const Contact = () => {
 				</div>
 				<div className="absolute bottom-0 left-0 bg-[url('./assets/pattern-dark.svg')] w-full h-16 bg-repeat-x bg-fill rotate-180 invert"></div>
 			</div>
-			<div className="w-1/2">
+			<div className="w-full md:w-1/2">
 				<img src={contact} alt="" className="object-cover w-full h-full" />
 			</div>
 		</section>

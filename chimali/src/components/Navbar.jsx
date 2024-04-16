@@ -3,75 +3,95 @@ import { Link } from "react-router-dom";
 import isotipo from "@/assets/isotipo.svg";
 
 const Navbar = () => {
-	const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-	useEffect(() => {
-		// Función para cambiar el estado de 'scrolled' al hacer scroll
-		const handleScroll = () => {
-			const offset = window.scrollY;
-			if (offset > 600) {
-				// Puedes ajustar este valor según sea necesario
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		};
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 
-		// Agregar evento de scroll al cargar el componente
-		window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 600) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-		// Eliminar el evento de scroll al desmontar el componente
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []); // El segundo argumento del useEffect es un array vacío, lo que significa que este efecto se ejecutará solo una vez al montar el componente
+    window.addEventListener("scroll", handleScroll);
 
-	return (
-		<div
-			className={`fixed top-0 z-10 w-full backdrop-blur-md bg-white/30 ${scrolled ? "bg-white/30" : "bg-transparent"}`}
-		>
-			<nav className="container flex flex-row items-center justify-between mx-auto py-7">
-				<div>
-					<img src={isotipo} alt="" />
-				</div>
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-				<ul className="flex flex-row justify-between gap-6 font-sans font-medium text-sm text-[#4A4242] uppercase h-full items-center">
-					<li>
-						<a
-							href="/"
-							className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
-						>
-							Quienes somos
-						</a>
-					</li>
+  return (
+    <header
+      className={`fixed top-0 z-10 w-full backdrop-blur-md ${scrolled ? "bg-white/30" : "bg-transparent"}`}
+    >
+      <div className="container flex items-center justify-between px-6 mx-auto py-7 xl:px-0">
+        <div>
+          <img
+            src={isotipo}
+            alt="Isotipo"
+            className="object-contain w-16 sm:w-20"
+          />
+        </div>
 
-					<li>
-						<a
-							href="/"
-							className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
-						>
-							Nuestros Productos
-						</a>
-					</li>
+        <nav className="flex flex-row items-center gap-6 font-medium text-sm text-[#4A4242] uppercase">
+          <ul className="flex-row items-center hidden gap-6 lg:flex">
+            <li>
+              <Link
+                to="/#quienes-somos"
+                className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
+                onClick={(e) => handleSmoothScroll(e, 'quienes-somos')}
+              >
+                Quienes somos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#productos"
+                className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
+                onClick={(e) => handleSmoothScroll(e, 'productos')}
+              >
+                Nuestros Productos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#contacto"
+                className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
+                onClick={(e) => handleSmoothScroll(e, 'contacto')}
+              >
+                Contacto
+              </Link>
+            </li>
+          </ul>
 
-					<li>
-						<a
-							href="/"
-							className={`nav-link ${scrolled ? "scrolled-link-color" : ""}`}
-						>
-							Contacto
-						</a>
-					</li>
-
-					<li>
-						<button className="border border-[#623D21] bg-[#956851] text-white font-sans text-sm font-semibold py-2 px-4">
-							Explorar Ahora
-						</button>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	);
+          <ul className="flex flex-row items-center gap-6">
+            <li>
+              <Link
+                to="/#productos"
+                onClick={(e) => handleSmoothScroll(e, 'productos')}
+                className="border border-[#623D21] bg-[#956851] text-white font-sans text-sm font-semibold py-2 px-4 lg:py-3 lg:px-6"
+              >
+                Explora Ahora
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 };
 
 export default Navbar;
