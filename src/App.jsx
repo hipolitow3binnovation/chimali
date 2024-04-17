@@ -6,6 +6,7 @@ import Products from "@/sections/Products";
 import CTA from "@/sections/CTA";
 import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 			</main>
 
 			<Footer />
+			<SpeedInsights />
 		</>
 	);
 }
