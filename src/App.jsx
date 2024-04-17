@@ -6,29 +6,24 @@ import About from "./sections/About";
 import Products from "./sections/Products";
 import CTA from "./sections/CTA";
 import Contact from "./sections/Contact";
-import gsap, { ScrollSmoother, ScrollToPlugin } from "gsap/all";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollSmoother, ScrollToPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
 	const mainContainer = useRef();
 
 	useEffect(() => {
-		let smoother = ScrollSmoother.create({
-			smooth: 1.5, // how long (in seconds) it takes to "catch up" to the native scroll position
-			effects: true, // looks for data-speed and data-lag attributes on elements
-		});
-		return () => {
-			smoother.kill();
-		};
-	});
-
+		// Puedes usar gsap.to() directamente para animar el scroll
+		gsap.to(window, { scrollTo: "#smooth-wrapper", duration: 1.5, ease: "power3.inOut" });
+	}, []);
+	
 	return (
 		<>
 			<div ref={mainContainer} id="smooth-wrapper">
 				<div id="smooth-content">
 					<Navbar />
-
 					<main className="w-full">
 						<Hero />
 						<About />
@@ -36,7 +31,6 @@ function App() {
 						<CTA />
 						<Contact />
 					</main>
-
 					<Footer />
 				</div>
 			</div>

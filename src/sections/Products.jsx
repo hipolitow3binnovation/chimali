@@ -6,8 +6,6 @@ import bottle_2 from "../assets/bottle-2.webp";
 import bottle_3 from "../assets/bottle-3.webp";
 import bottle_4 from "../assets/bottle-4.webp";
 import bottle_5 from "../assets/bottle-5.webp";
-import bottle_6 from "../assets/bottle-6.webp";
-import bottle_7 from "../assets/bottle-7.webp";
 
 const Products = () => {
 	return (
@@ -31,7 +29,7 @@ const Products = () => {
 				<div className="col-span-1">
 					<div className="relative w-full h-full group">
 						<img src={bottle_1} alt="Botella de Mezcal 1" className="object-cover w-full h-full bg-cover" />
-						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-black/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
+						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-[#261C13]/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
 							<h3 className="absolute p-8 font-serif text-lg font-semibold tracking-wider text-white uppercase transition-all duration-300 translate-y-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 lg:text-2xl">Ámbar Zapoteco</h3>
 							<p className="absolute p-8 font-sans text-sm font-normal leading-7 text-white transition-all duration-300 -translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 lg:text-lg">Sabor a caramelo con toques de vainilla y ahumado.</p>
 						</div>
@@ -41,7 +39,7 @@ const Products = () => {
 				<div className="col-span-1 md:row-start-2">
 					<div className="relative w-full h-full group">
 						<img src={bottle_2} alt="Botella de Mezcal 2" className="object-cover w-full h-full bg-cover" />
-						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-black/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
+						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-[#261C13]/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
 							<h3 className="absolute p-8 font-serif text-lg font-semibold tracking-wider text-white uppercase transition-all duration-300 translate-y-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 lg:text-2xl">Luz de Oaxaca</h3>
 							<p className="absolute p-8 font-sans text-sm font-normal leading-7 text-white transition-all duration-300 -translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 lg:text-lg">Fresco y cítrico con aroma herbal.</p>
 						</div>
@@ -51,7 +49,7 @@ const Products = () => {
 				<div className="lg:mt-16 md:col-start-2 md:row-span-2">
 					<div className="relative w-full h-full group">
 						<img src={bottle_3} alt="Botella de Mezcal 3" className="object-cover w-full h-full bg-cover md:bg-contain md:object-contain aspect-square md:aspect-auto" />
-						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-black/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
+						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-[#261C13]/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
 							<h3 className="absolute p-8 font-serif text-lg font-semibold tracking-wider text-white uppercase transition-all duration-300 translate-y-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 lg:text-2xl">Resplandor de la Sierra</h3>
 							<p className="absolute p-8 font-sans text-sm font-normal leading-7 text-white transition-all duration-300 -translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 lg:text-lg">Notas de madera, caramelo y especias.</p>
 						</div>
@@ -61,7 +59,7 @@ const Products = () => {
 				<div className="col-span-1 lg:mt-32 md:col-start-3 md:row-start-1">
 					<div className="relative w-full h-full group">
 						<img src={bottle_4} alt="Botella de Mezcal 4" className="object-cover w-full h-full bg-cover" />
-						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-black/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
+						<div className="absolute flex flex-col items-center justify-center p-8 transition-all duration-300 shadow inset-16 bg-[#261C13]/10 group-hover:backdrop-blur-sm backdrop-brightness-90 group-hover:top-6 group-hover:bottom-6">
 							<h3 className="absolute p-8 font-serif text-lg font-semibold tracking-wider text-white uppercase transition-all duration-300 translate-y-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 lg:text-2xl">Fuego Ancestral</h3>
 							<p className="absolute p-8 font-sans text-sm font-normal leading-7 text-white transition-all duration-300 -translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 lg:text-lg">Intenso con toques de cacao y pimienta.</p>
 						</div>
@@ -79,18 +77,6 @@ const Products = () => {
 								Explora toda la colección
 							</Link>
 						</div>
-					</div>
-				</div>
-
-				<div className="hidden col-span-1 md:col-span-2 md:row-start-3 md:block">
-					<div className="w-full h-full">
-						<img src={bottle_6} alt="Botella de Mezcal 6" className="object-cover w-full h-full bg-contain" />
-					</div>
-				</div>
-
-				<div className="hidden col-span-1 md:row-start-3 md:block">
-					<div className="w-full h-full">
-						<img src={bottle_7} alt="Botella de Mezcal 7" className="object-cover w-full h-full bg-contain" />
 					</div>
 				</div>
 			</div>
