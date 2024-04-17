@@ -1,6 +1,6 @@
 import React from "react";
-import bg_about from "@/assets/bg-about.webp";
-import logo from "@/assets/logo.svg";
+import bg_about from ".././assets/bg-about.webp";
+import logo from "../assets/logo.svg";
 
 const About = () => {
 	return (

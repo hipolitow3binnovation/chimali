@@ -1,7 +1,7 @@
 import React from "react";
-import bg_cta from "@/assets/bg-cta.webp";
-import lemon from "@/assets/lemon.webp";
-import water from "@/assets/water.webp";
+import bg_cta from "../assets/bg-cta.webp";
+import lemon from "../assets/lemon.webp";
+import water from "../assets/water.webp";
 
 const CTA = () => {
 	return (

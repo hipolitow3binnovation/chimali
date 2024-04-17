@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hand from "@/assets/hand.webp";
-import bottle_1 from "@/assets/bottle-1.webp";
-import bottle_2 from "@/assets/bottle-2.webp";
-import bottle_3 from "@/assets/bottle-3.webp";
-import bottle_4 from "@/assets/bottle-4.webp";
-import bottle_5 from "@/assets/bottle-5.webp";
-import bottle_6 from "@/assets/bottle-6.webp";
-import bottle_7 from "@/assets/bottle-7.webp";
+import hand from "../assets/hand.webp";
+import bottle_1 from "../assets/bottle-1.webp";
+import bottle_2 from "../assets/bottle-2.webp";
+import bottle_3 from "../assets/bottle-3.webp";
+import bottle_4 from "../assets/bottle-4.webp";
+import bottle_5 from "../assets/bottle-5.webp";
+import bottle_6 from "../assets/bottle-6.webp";
+import bottle_7 from "../assets/bottle-7.webp";
 
 const Products = () => {
 	return (

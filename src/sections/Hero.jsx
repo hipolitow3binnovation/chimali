@@ -1,5 +1,5 @@
 import React from "react";
-import bg_hero from "@/assets/bg-hero.webp";
+import bg_hero from "../assets/bg-hero.webp";
 
 const Hero = () => {
   return (
