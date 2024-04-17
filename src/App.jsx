@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
@@ -6,31 +6,29 @@ import About from "./sections/About";
 import Products from "./sections/Products";
 import CTA from "./sections/CTA";
 import Contact from "./sections/Contact";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import gsap, { ScrollSmoother, ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function App() {
-	const mainContainer = useRef();
-
 	useEffect(() => {
-		// Puedes usar gsap.to() directamente para animar el scroll
-		gsap.to(window, {
-			duration: 1,
-			scrollTo: {
-				autoKill: true
-			},
-			ease: "power3.inOut"
+		// Crear una instancia de ScrollSmoother
+		let smoother = ScrollSmoother.create({
+			smooth: 0.2, // Duración en segundos para llegar a la posición de desplazamiento nativa
+			effects: true, // Habilitar efectos
+			normalizeScroll: true // Normalizar el desplazamiento
 		});
 
-	}, []);
+		return () => {
+			smoother.kill(); // Limpiar la instancia al desmontar el componente
+		};
+	}, []); // El efecto se ejecutará solo una vez después de que el componente se monte
 
 	return (
 		<>
-			<div ref={mainContainer} id="smooth-wrapper">
+			<Navbar />
+			<div id="smooth-wrapper">
 				<div id="smooth-content">
-					<Navbar />
 					<main className="w-full">
 						<Hero />
 						<About />
