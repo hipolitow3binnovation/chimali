@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -13,19 +17,19 @@ input[type="radio"],
 input[type="file"],
 select,
 textarea {
-	@apply outline-none focus:ring-0 border border-[#ADADAD] block px-4 py-2 w-full
-  placeholder:font-sans placeholder:font-light placeholder:text-sm placeholder:text-[#888888];
+  @apply block w-full border border-[#ADADAD] px-4 py-2 outline-none placeholder:font-sans
+  placeholder:text-sm placeholder:font-light placeholder:text-[#888888] focus:ring-0;
 }
 
 label {
-	@apply font-sans font-semibold text-sm text-[#363636] block;
+  @apply block font-sans text-sm font-semibold text-[#363636];
 }
 
 ion-icon {
-	font-size: 16px;
-	color: #ffffff;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .scrolled-link-color {
-	color: #ffffff;
+  color: #ffffff;
 }

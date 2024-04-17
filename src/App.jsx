@@ -16,9 +16,16 @@ function App() {
 
 	useEffect(() => {
 		// Puedes usar gsap.to() directamente para animar el scroll
-		gsap.to(window, { scrollTo: "#smooth-wrapper", duration: 1.5, ease: "power3.inOut" });
+		gsap.to(window, {
+			duration: 1,
+			scrollTo: {
+				autoKill: true
+			},
+			ease: "power3.inOut"
+		});
+
 	}, []);
-	
+
 	return (
 		<>
 			<div ref={mainContainer} id="smooth-wrapper">
